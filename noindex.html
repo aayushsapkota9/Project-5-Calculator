@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Two-Column Layout with Stacked Containers</title>
+    <style>
+      /* Style for the left container */
+      .left-container {
+        width: 50%;
+        float: left;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+
+      /* Style for the right element */
+      .right-element {
+        width: 50%;
+        float: right;
+        height: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid black;
+      }
+
+      /* Style for the first container within the left container */
+      .left-container .container1 {
+        margin-bottom: 10px;
+        height: 150px;
+        background-color: #ccc;
+        border: 1px solid black;
+      }
+
+      /* Style for the second container within the left container */
+      .left-container .container2 {
+        height: 200px;
+        background-color: #eee;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left-container">
+      <div class="container1">
+        <!-- content for container1 -->
+      </div>
+      <div class="container2">
+        <!-- content for container2 -->
+      </div>
+    </div>
+    <div class="right-element">
+      <!-- content for right element -->
+    </div>
+  </body>
+</html>
