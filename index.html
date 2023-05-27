@@ -13,6 +13,7 @@
 <body>
 
   <div class="main">
+    <button class="temp">Click me </button>
   <h3 class="head">Calculator</h3>
   <div class="calculator ">
     <div class="screen"><div class="answer">0</div></div>
@@ -20,31 +21,31 @@
       <div class="row">
         <button class="buttonStyle clear">AC</button>
         <button class="buttonStyle signChange" >+/-</button>
-        <button class="buttonStyle modulo" >%</button>
-        <button class="buttonStyle divide">/</button>
+        <button class="buttonStyle  operator" >%</button>
+        <button class="buttonStyle operator" value="/" >/</button>
       </div>
       <div class="row">
-        <button class="buttonStyle">7</button>
-        <button class="buttonStyle">8</button>
-        <button class="buttonStyle">9</button>
-        <button class="buttonStyle multiply">*</button>
+        <button class="buttonStyle number" value="7">7</button>
+        <button class="buttonStyle number" value="8">8</button>
+        <button class="buttonStyle number" value="9">9</button>
+        <button class="buttonStyle operator" value="*">*</button>
       </div>
       <div class="row">
-        <button class="buttonStyle">4</button>
-        <button class="buttonStyle">5</button>
-        <button class="buttonStyle">6</button>
-        <button class="buttonStyle subtract">-</button>
+        <button class="buttonStyle number" value="4" >4</button>
+        <button class="buttonStyle number" value="5">5</button>
+        <button class="buttonStyle number" value="6">6</button>
+        <button class="buttonStyle operator" value="-">-</button>
       </div>
       <div class="row">
-        <button class="buttonStyle">1</button>
-        <button class="buttonStyle">2</button>
-        <button class="buttonStyle">3</button>
-        <button class="buttonStyle add">+</button>
+        <button class="buttonStyle number" value="1">1</button>
+        <button class="buttonStyle number" value="2">2</button>
+        <button class="buttonStyle number" value="3">3</button>
+        <button class="buttonStyle operator" value="+">+</button>
       </div>
       <div class="row">
-        <button class="buttonStyle zero">0</button>
+        <button class="buttonStyle zero number" value="0">0</button>
         <button class="buttonStyle decimal">.</button>
-        <button class="buttonStyle equals">=</button>
+        <button class="buttonStyle equals operator" value="=">=</button>
       </div>
 
 
@@ -52,6 +53,7 @@
 
   </div>
 </div>
+<script src="index.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,7 @@
 /* *{
   border: 1px solid red;
 } */
-.calculator>*{
-  /* border: 1px solid red; */
-  
 
-}
 h3{
   font-size: 3vw;
   margin-top: 0;
@@ -19,8 +15,8 @@ h3{
    flex-wrap: wrap;
    margin-right: auto;
    margin-left: auto;
-   width: 35vw;
-   height: 95vh;
+   width: 36vw;
+   height: 57rem;
 }
 .head{
   width: auto;
@@ -64,7 +60,7 @@ h3{
 .screen{
   height: 10vw;
   overflow: auto;
-  font-size: 8vw;
+  font-size: 5vw;
   /* border: 2px solid red; */
   text-align: right;
   vertical-align: bottom;
