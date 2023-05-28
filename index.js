@@ -1,5 +1,5 @@
 function add(a, b) {
-    previousDisplay = +a + +b+operator;
+    previousDisplay = +a + +b + operator;
     no1 = +a + +b;
     no2 = '';
     document.querySelector('.answer').innerHTML = previousDisplay;
@@ -7,7 +7,7 @@ function add(a, b) {
 
 }
 function subtract(a, b) {
-    previousDisplay = +a - +b+operator;
+    previousDisplay = +a - +b + operator;
     no1 = +a - +b;
     no2 = '';
 
@@ -16,7 +16,7 @@ function subtract(a, b) {
 
 }
 function muliply(a, b) {
-    previousDisplay = +a * +b+operator;
+    previousDisplay = +a * +b + operator;
     no1 = +a * +b;
     no2 = '';
 
@@ -24,7 +24,7 @@ function muliply(a, b) {
     // operator = '';
 }
 function divide(a, b) {
-    previousDisplay = +a / +b +operator;
+    previousDisplay = +a / +b + operator;
     no1 = +a / +b;
     no2 = '';
 
@@ -39,37 +39,61 @@ function handleNo1(a) {
 
 }
 function handleOperation(b) {
-    if (b != '=') {
-        
-        operator = b;
-        previousDisplay = no1 + operator;
-        console.log(previousDisplay);
-        let temp = document.querySelector('.answer').innerHTML + b;
-        // let temp = document.querySelector('.answer').innerHTML + b;
-        document.querySelector('.answer').innerHTML = temp;
-        operationCount++;
-        
+    // if (b != '=') {
 
-        if (operationCount > 1 && no2 != '') {
-            operate(previousOperator, no1, no2);
+    operator = b;
+    previousDisplay = no1 + operator;
+    
+    console.log(previousDisplay);
+    let temp = document.querySelector('.answer').innerHTML + b;
+    document.querySelector('.answer').innerHTML = temp;
+    operationCount++;
 
-        }
-        previousOperator = b;
+
+    if (no2 != '') {
+        operate(previousOperator, no1, no2);
 
     }
-    else if(b=='=')
-    {
-        if (operationCount > 1 && no2 != '') {
-            operate(previousOperator, no1, no2);
+    previousOperator = b;
 
-        } 
+
+    if (operationCount > 1 && no2 != '') {
+        operate(previousOperator, no1, no2);
+
     }
 }
+
+// }
 function handleNo2(c) {
     if (operationCount > 0) {
         no2 = no2 + c;
         temp = previousDisplay + no2;
         document.querySelector('.answer').innerHTML = temp;
+    }
+}
+function operate(operator, no1, no2) {
+
+    if (operator == '+') {
+        console.log("I have to do sum");
+        add(no1, no2);
+    }
+    else if (operator == '-') {
+        console.log("I have to subtract");
+        subtract(no1, no2);
+    }
+    else if (operator == '/') {
+        console.log("I have to divide");
+        divide(no1, no2);
+    }
+    else if (operator == "*") {
+        console.log("I have to multiply");
+        muliply(no1, no2);
+    }
+    else if (operator == '=') {
+
+        operate('', no1, no2);
+
+
     }
 }
 
@@ -81,6 +105,7 @@ var answer = 0;
 var operationCount = 0;
 var previousDisplay = '';
 var previousOperator = '';
+let onlyForEqualsOutside = 0;
 let display = document.querySelector('.answer');
 
 if (operationCount == 0) {
@@ -103,39 +128,24 @@ number2.forEach(element => {
     element.addEventListener('click', () => { handleNo2(c) });
 });
 
-let equals = document.querySelector('.equals');
-equals.addEventListener('click', () => {
-    operate(operator, no1, no2);
-})
+// if(onlyForEqualsOutside<1)
+// {
+// let equals = document.querySelector('.equals');
+//     equals.addEventListener('click', () => {
+//         operate(operator, no1, no2);
+//     });
+//     onlyForEqualsOutside++;
+// }
+
+// let equals = document.querySelector('.equals');
+// equals.addEventListener('click', () => {
+//     operate(operator, no1, no2);
+// })
 
 
 
 
-function operate(operator, no1, no2) {
 
-    if (operator == '+') {
-        console.log("I have to do sum");
-        add(no1, no2);
-    }
-    else if (operator == '-') {
-        console.log("I have to subtract");
-        subtract(no1, no2);
-    }
-    else if (operator == '/') {
-        console.log("I have to divide");
-        divide(no1, no2);
-    }
-    else if (operator == "*") {
-        console.log("I have to multiply");
-        muliply(no1, no2);
-    }
-    else if (operator == '=') {
-
-        operate(operator, no1, no2);
-
-
-    }
-}
 
 
 
@@ -144,7 +154,9 @@ function operate(operator, no1, no2) {
 
 temp = document.querySelector('.temp');
 temp.addEventListener('click', () => {
+    console.log(`no 1 is ${no1} no2 is ${no2}`);
     console.log(`previous display is ${previousDisplay}`);
     console.log(`Operator is ${operator}`);
+    console.log(`PreviousOperator is ${previousOperator}`);
 
 })
