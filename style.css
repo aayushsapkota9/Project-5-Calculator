@@ -5,11 +5,11 @@ body{
   margin-left: 0;
   margin-top: 0;
 }
-h3{
+/* h3{
   font-size: 3vw;
   margin-top: 0;
   color: white;
-}
+} */
 .main{
   border: 1px solid black;
    display: flex;
@@ -18,10 +18,11 @@ h3{
    align-items: center;
    /* justify-content: center;  */
    flex-wrap: wrap;
+   padding-top: 12vh;
    margin-right: auto;
    margin-left: auto;
    width: 36vw;
-   height: 57rem;
+   height: 100vh;
    background-color: black;
 }
 .head{
@@ -89,6 +90,7 @@ h3{
   .main{
     width: 100vw;
     height: 100vh;
+    padding-top: 3vh;
   }
   .row{
     width: 92vw;
