@@ -82,3 +82,24 @@ h3{
   background-color: #b3b3b3;
   color: #000000;
 }
+@media (max-width: 600px) {
+  .main{
+    width: 100vw;
+    height: 45rem;
+  }
+  .row{
+    width: 92vw;
+  }
+  .allButtons{
+    gap: 6vh;
+    margin-top: -10vw;
+  }
+  .screen{
+    height: 45vw;
+    font-size: 15vw;
+  }
+  .buttonStyle{
+    width: 13vw;
+    height: 13vw;
+  }
+}
